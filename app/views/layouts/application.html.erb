@@ -13,16 +13,11 @@
 
 
 <body>
-    <%= render 'shared/nav_bar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <%= render 'shared/nav_bar' %>
 
-
-
-
+  <%= render 'shared/flashes' %>
+  <%= yield %>
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>
 
