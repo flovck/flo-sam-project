@@ -1,16 +1,16 @@
-<h1> @lift.name</h1>
+<h1><%= @lift.name %></h1>
 
-<p> = link_to 'Retour à la liste des ponts', lifts_path </p>
+<p><%= link_to 'Retour à la liste des ponts', lifts_path %></p>
 
-<p> = link_to 'Ajouter un nouveau point', new_lift_path(@lift)</p>
+<p><%= link_to 'Ajouter un nouveau point', new_lift_path(@lift)%></p>
 
 <p>
-  <strong>Nom:</strong>
+  <strong>Nom :</strong>
   <%= @lift.name %>
 </p>
 
 <p>
-  <strong>Adresse:</strong>
+  <strong>Adresse :</strong>
   <%= @lift.address %>
 </p>
 
