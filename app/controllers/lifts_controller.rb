@@ -12,7 +12,7 @@
   end
 
   def create
-    @lift = Lift.new(cocktail_params)
+    @lift = Lift.new(lift_params)
     if @lift.save
       redirect_to @lift
     else
