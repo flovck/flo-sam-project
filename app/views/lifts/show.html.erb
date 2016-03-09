@@ -4,4 +4,23 @@
 
 <p> = link_to 'Add a new Lift', new_lift_path(@lift)</p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @lift.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @lift.category %>
+</p>
+
+<%= link_to 'Edit', edit_lift_path(@lift) %> |
+<%= link_to 'Back', lifts_path %>
+
+
+
+
+
+
+
 
