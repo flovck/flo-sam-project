@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :owners
   devise_for :users
 
   root to: "lifts#index"
@@ -8,7 +7,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :show, :index, :destroy]
   end
 
-  resources :owners do
+  resources :users do
     resources :lifts, only: [:destroy]
   end
 end

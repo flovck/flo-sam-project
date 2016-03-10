@@ -1,7 +1,6 @@
 class Lift < ActiveRecord::Base
-
+   belongs_to :user, required: true
    has_many :reviews, as: :imageable
-   belongs_to :owner, required: true
 
    mount_uploader :photo, PhotoUploader
 
