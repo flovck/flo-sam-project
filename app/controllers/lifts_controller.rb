@@ -13,6 +13,8 @@
 
   def create
     @lift = Lift.new(lift_params)
+    @lift.user = current_user
+
     if @lift.save
       redirect_to @lift
     else
@@ -44,14 +46,4 @@
   def lift_params
     params.require(:lift).permit(:name, :adress, :photo, :photo_cache)
   end
-
-
-
 end
-
-
-
-
-
-
-

@@ -1,4 +1,5 @@
-<%= form_for(@lift) do |f| %>
+
+<%= simple_form_for(@lift) do |f| %>
   <% if @lift.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@lift.errors.count, "error") %> prohibited this lift from being saved:</h2>
@@ -11,25 +12,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :category%><br>
-    <%= f.text_area :category %>
-  </div>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
 
-  <%= form.input :photo %>
-  <%= form.input :photo_cache, as: :hidden %>
+  <div class="form-actions">
+           <%= f.button :submit, "Create", id:'log' %>
+         </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
 <% end %>
-
-
