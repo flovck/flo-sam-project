@@ -16,6 +16,9 @@
   <%= @lift.address %>
 </p>
 
+<%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %>
+
+
 <%= link_to 'Edit', edit_lift_path(@lift) %> |
 <%= link_to 'Back', lifts_path %>
 

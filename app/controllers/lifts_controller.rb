@@ -45,6 +45,8 @@
     params.require(:lift).permit(:name, :adress, :photo, :photo_cache)
   end
 
+
+
 end
 
 
