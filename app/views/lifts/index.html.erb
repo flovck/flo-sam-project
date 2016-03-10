@@ -1,31 +1,35 @@
-<div class="login">
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('garagepourri.jpg');">
-  <div class="banner-content">
+<div>
+  <div class= "container">
+    <h2>Résultat de votre recherche: choisissez un pont</h2>
+    <% @lifts.each do |lift| %>
+    <div class= "row">
+      <div class= "col-xs-6 col-sm-6">
+        <div class= "col-xs-3 col-sm-3">
+          <a href="<%= image_path '' %>"> photo </a>
 
-    <h1>Choisissez un pont</h1>
-
-      <div class= "container">
-        <div class= "row">
-          <% @lifts.each do |lift| %>
-            <div class= "col-xs-12.col-sm-4">
-              <div class= "card">
-                <h2><%= link_to lift.name, lift_path(lift)%></h2>
-                <h5><%= lift.address%></h5>
-
-              </div>
-            </div>
-          <% end -%>
-            <br>
-            <div class="col-xs-12">
-                <p><%= link_to 'Ajouter un pont', new_lift_path, {class: "btn-medium"}%></p>
+        </div>
+        <div class= "col-xs-6 col-sm-6">
+         <div class="card">
+          <h3><%= link_to lift.name, lift_path(lift)%></h3>
+          <h5><%= lift.address%></h5>
+          <!--
+          <div class= "card">
+            <div class= "col-xs-6 col-sm-3">
 
             </div>
+
+          </div> -->
         </div>
       </div>
+      <div class= "col-xs-3 col-sm-3">
+      </div>
+    </div>
+    <div class= "col-xs-6 col-sm-6">
+
+    </div>
   </div>
+  <% end -%>
 </div>
+<br>
+<p><%= link_to 'Ajouter un pont', new_lift_path, {class: "btn-medium"}%></p>
 </div>
-
-
-
-
