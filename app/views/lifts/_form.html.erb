@@ -23,8 +23,13 @@
     <%= f.label :category%><br>
     <%= f.text_area :category %>
   </div>
+
+  <%= form.input :photo %>
+  <%= form.input :photo_cache, as: :hidden %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
 
