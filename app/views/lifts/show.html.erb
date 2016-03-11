@@ -18,6 +18,15 @@
 
 <%= cl_image_tag @lift.photo, height: 300, width: 400, crop: :fill %>
 
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var coord = <%= raw @lift_coordinates %>;
+      alert('lift coordinates are ' + coord.lat + ', ' + coord.lng);
+    });
+  <% end %>
+<% end %>
+
 
 <%= link_to 'Edit', edit_lift_path(@lift) %> |
 <%= link_to 'Back', lifts_path %>

@@ -1,10 +1,15 @@
   class LiftsController < ApplicationController
   def index
     @lifts = Lift.all
+    @markers = Gmaps4rails.build_markers(@lifts) do |lift, marker|
+      marker.lat lift.latitude
+      marker.lng lift.longitude
+    end
   end
 
   def show
     @lift = Lift.find(params[:id])
+    @lift_coordinates = { lat: @lift.latitude, long: @lift.longitude }
   end
 
   def new
@@ -44,6 +49,6 @@
   private
 
   def lift_params
-    params.require(:lift).permit(:name, :adress, :photo, :photo_cache)
+    params.require(:lift).permit(:name, :address, :photo, :photo_cache)
   end
 end

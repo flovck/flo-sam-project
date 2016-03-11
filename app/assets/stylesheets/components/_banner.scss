@@ -4,6 +4,7 @@
   background-image: url('garagepourri.jpg');
   height: 100vh;
   background-repeat: no-repeat;
+  background-blend-mode: lighten;
   background-size: cover;
   display: flex;
   color: white;
@@ -13,6 +14,7 @@
   line-height: 1.1;
   text-rendering: optimizelegibility;
 }
+
 
 .banner h1 {
     display: block;
@@ -24,47 +26,24 @@
     font-weight: bold;
 }
 
-.card {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));
-//  background-image: url('background.jpg');
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  color: white;
-  position: relative;
+.btn-primary {
+  background-color: #5CA4A9;
+  margin-left: 5px;
+  border: 1px solid #5CA4A9 ;
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+
+.btn-primary:hover {
+  background-color: #469AE0;
+  margin-left: 5px;
+  border: 1px solid #469AE0;
 }
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 10px;
-  text-transform: uppercase;
+
+.form-control {
+  background-color: transparent;
+  border: 3px solid #5CA4A9 ;
+  color: #5CA4A9;
+  margin-left: 5px;
 }
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-.card-description h2 {
-  font-size: 24px;
-}
-.card-description p {
-  font-size: 13px;
-  }
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  z-index:2;
-  background: black;
-  opacity: 0;
-}
-.card-link:hover{
-  opacity: 0.1;
-}
+
+
+
