@@ -1,12 +1,64 @@
-<h1><%= @lift.name %></h1>
 
-<p><%= link_to 'Retour à la liste des ponts', lifts_path %></p>
+<div class= "wrapper-grey">
+  <div class= "container", style="padding-top: 40px">
 
-<p><%= link_to 'Ajouter un nouveau point', new_lift_path(@lift)%></p>
+    <div class= "row">
+      <div class= "col-xs-12 col-sm-12">
+        <div class= "col-xs-9 col-sm-9">
+          <h2>Réservez votre créneau pour votre pont:</h2>
+        </div>
+        <div class= "col-xs-3 col-sm-3">
+          <%= link_to 'Retour à la liste des ponts', lifts_path, {class: "btn-medium"}%>
+        </div>
+      </div>
+        <div class= "col-xs-3 col-sm-3", style="padding-top: 20px">
+         <%= cl_image_tag @lift.photo, height: 200, width: 200, crop: :fill %>
+    </div>
+
+      <div class= "col-xs-9 col-sm-9">
+        <div class="card">
+          <h3><%= @lift.name%></h3>
+          <h5><%= @lift.address%></h5>
+        </div>
+      </div>
+
+      <div class= "col-xs-3 col-sm-3">
+<!--         <%= link_to 'Edit', edit_lift_path(@lift) %> |
+        <%= link_to 'Back', lifts_path %> -->
+<!--         <p><%= link_to 'Ajouter un nouveau point', new_lift_path(@lift)%></p> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class= "wrapper-grey">
+  <div class= "container", style="padding-top: 100px; padding-bottom: 100px">
+    <div class= "row">
+      <div class='col-sm-8'>
+        <div class="form-group">
+          <div class='input-group date' id='datetimepicker1'>
+            <input type='text' class="form-control" />
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+
+        <%= week_calendar number_of_weeks: 2 do |date| %>
+        <%= date %>
+        <% end %>
+      </div>
+      <div class='offset-1-col-sm-4'>
+        <div class="form-group">
+          <%= link_to 'Réservez', lifts_path, {class: "btn-medium"}%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
-<p>
+<!-- <p>
   <strong>Nom :</strong>
   <%= @lift.name %>
 </p>
@@ -15,17 +67,19 @@
   <strong>Adresse :</strong>
   <%= @lift.address %>
 </p>
-
-<%= cl_image_tag @lift.photo, height: 300, width: 400, crop: :fill %>
-
-
-<%= link_to 'Edit', edit_lift_path(@lift) %> |
-<%= link_to 'Back', lifts_path %>
+ -->
 
 
 
 
 
+          <!--
+          <div class= "card">
+            <div class= "col-xs-6 col-sm-3">
+
+            </div>
+
+          </div> -->
 
 
 

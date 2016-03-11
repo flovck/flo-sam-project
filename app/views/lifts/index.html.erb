@@ -1,19 +1,8 @@
-<div class="banner">
-  <div class="banner-content">
-    <h1>L'entretien sans intermédiaire</h1>
-    <h1>Louez votre espace de garage</h1>
 
-      <form class="form-inline">
-        <div class="form-group">
-          <label for="geolocalizeAddress">Votre code postal</label>
-            <input type="text" class="form-control" id="geolocalizeAddress" placeholder="59120">
-        </div>
-      <button type="submit" class="btn btn-default">Valider</button>
-      </form>
 
-  </div>
-</div>
-<div>
+<render banner>
+
+
   <div class= "container">
     <h2>Résultat de votre recherche: choisissez un pont</h2>
     <% @lifts.each do |lift| %>
@@ -47,4 +36,4 @@
 </div>
 <br>
 <p><%= link_to 'Ajouter un pont', new_lift_path, {class: "btn-medium"}%></p>
-</div>
+
