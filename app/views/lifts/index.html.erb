@@ -1,4 +1,5 @@
 
+<<<<<<< dc024119334d664da39bd2b7779fadb24fa8451f
 <div class="banner">
   <div class="banner-content">
     <h1>L'entretien sans intermédiaire</h1>
@@ -13,6 +14,28 @@
     </form>
   </div>
 </div>
+=======
+
+<render banner>
+
+
+  <div class= "container">
+    <h2>Résultat de votre recherche: choisissez un pont</h2>
+    <% @lifts.each do |lift| %>
+    <div class= "row">
+      <div class= "col-xs-6 col-sm-6">
+        <div class= "col-xs-3 col-sm-3">
+          <a href="<%= image_path '' %>"> photo </a>
+
+        </div>
+        <div class= "col-xs-6 col-sm-6">
+         <div class="card">
+          <h3><%= link_to lift.name, lift_path(lift)%></h3>
+          <h5><%= lift.address%></h5>
+          <!--
+          <div class= "card">
+            <div class= "col-xs-6 col-sm-3">
+>>>>>>> MAJ show et un peu plus
 
 <div class="banner-content">
   <h1>Choisissez un pont</h1>
@@ -37,6 +60,7 @@
       <div id="map" style="width: 100%; height: 600px;"></div>
     </div>
   </div>
+<<<<<<< dc024119334d664da39bd2b7779fadb24fa8451f
   <div class="row">
     <p><%= link_to 'Ajouter un pont', new_lift_path, {class: "btn-medium"}%></p>
   </div>
@@ -54,3 +78,10 @@
     })
   <% end %>
 <% end %>
+=======
+  <% end -%>
+</div>
+<br>
+<p><%= link_to 'Ajouter un pont', new_lift_path, {class: "btn-medium"}%></p>
+
+>>>>>>> MAJ show et un peu plus
